@@ -96,6 +96,9 @@ class TeamServer:
 
     def verifySession(self):
         for submission in self.subreddit.top(time_filter='all'):
+            # print("submission: " + submission)
+            print("submissionTitle: " + submission.title)
+            print("listenerName: " + self.listener_name) 
             if(submission.title == self.listener_name):
                 self.submission = submission
         return self.submission
